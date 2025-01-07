@@ -55,7 +55,7 @@ const SideScroll = () => {
             key={index}
             className="flex justify-center items-center p-10 ml-2 mt-5 text-center relative"
           >
-            <div className="mt-10 bg-blue-300 p-5 rounded-xl shadow-lg">
+            <div className="mt-10 bg-blue-300 p-5 rounded-xl shadow-lg ml-8">
               <div class="w-32 h-32 bg-blue-500 rounded-full flex items-center justify-center text-center ml-36 mt-10  absolute -top-0 ">
                 <img
                   src={review.profilePhoto}
