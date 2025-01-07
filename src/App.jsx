@@ -1,21 +1,39 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./component/Navbar";
+import Login from "./pages/login";
+import Home from "./component/Home";
+import Signup from "./component/Signup";
+import SideScroll from "./component/SideScroll";
+import Midpage from "./component/Midpage";
+import Progress from "./component/Progress";
+import Lastpage from "./component/Lastpage";
+import Footer from "./component/Footer";
 
 const App = () => {
   return (
-    <div>
-      <nav className="">
-        <h1 className="text-3xl font-bold font-serif mt-5 ml-7">Buffer</h1>
-        <a href="">
-          <ul className="flex justify-center gap-10  text-xl font-semibold">
-            <li></li>
-            <li>Tools</li>
-            <li>Channels</li>
-            <li>Pricing</li>
-            <li>Blog</li>
-          </ul>
-        </a>
-      </nav>
-    </div>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Home />
+              <SideScroll />
+              <Midpage />
+              <Progress />
+              <Lastpage />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* Route for Login without Navbar */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<Signup />} />
+      </Routes>
+    </Router>
   );
 };
 
