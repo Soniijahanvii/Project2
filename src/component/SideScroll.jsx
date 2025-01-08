@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 const reviews = [
   {
     name: "John",
-    review: "Amazing product!Highly recommend.",
+    review: "Amazing product! Highly recommend.",
     profilePhoto:
       "https://img.freepik.com/premium-photo/man-portrait-american-flag-patriotic-pride-heritage-background-male-model-stars-stripes-traditional-usa-freedom-representation-celebration-human-rights_590464-394935.jpg?uid=R181352641&ga=GA1.1.1458633077.1704454199&semt=ais_hybrid",
   },
@@ -40,36 +40,46 @@ const SideScroll = () => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 3, // Default: 3 slides for desktop
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1, // Show only 1 slide on mobile
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="mt-10 mb-20 ">
+    <div className="mt-10 mb-20">
       <Slider {...settings}>
         {reviews.map((review, index) => (
           <div
             key={index}
-            className="flex justify-center items-center p-10 ml-2 mt-5 text-center relative"
+            className="flex justify-center items-center text-center relative p-10 ml-2"
           >
-            <div className="mt-10 bg-blue-300 p-5 rounded-xl shadow-lg ml-8">
-              <div class="w-32 h-32 bg-blue-500 rounded-full flex items-center justify-center text-center ml-36 mt-10  absolute -top-0 ">
+            <div className="mt-10 bg-blue-300 p-5 rounded-xl shadow-lg">
+              {/* Profile Photo */}
+              <div className="w-32 h-32 bg-blue-500 rounded-full flex items-center justify-center absolute -top-0 left-1/2 transform -translate-x-1/2">
                 <img
                   src={review.profilePhoto}
                   alt={`${review.name}'s profile`}
-                  className="w-28 h-28 rounded-full  object-cover border-2 border-gray-200"
+                  className="w-28 h-28 rounded-full object-cover border-2 border-gray-200"
                 />
               </div>
 
-              <div className="bg-white p-10 rounded-lg shadow-lg w-80 text-center h-full mt-5 ml-14 mb-4 ">
-                <div className="flex justify-center animate-marquee whitespace-nowrap mb-10 "></div>
-                <p className="font-bold text-xl text-gray-800 mb-4 ">
+              {/* Card Content */}
+              <div className="bg-white p-10 rounded-lg shadow-lg w-80 h-full ml-14">
+                <p className="font-bold text-xl text-gray-800 mb-4">
                   {review.name}
                 </p>
-                <p className=" text-gray-600 text-lg mb-5">{review.review}</p>
+                <p className="text-gray-600 text-lg mb-5">{review.review}</p>
               </div>
             </div>
           </div>

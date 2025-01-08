@@ -12,28 +12,30 @@ import Footer from "./component/Footer";
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Navbar />
-              <Home />
-              <SideScroll />
-              <Midpage />
-              <Progress />
-              <Lastpage />
-              <Footer />
-            </>
-          }
-        />
+    <div className="min-h-screen overflow-x-hidden">
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Navbar />
+                <Home />
+                <SideScroll />
+                <Midpage />
+                <Progress />
+                <Lastpage />
+                <Footer />
+              </>
+            }
+          />
 
-        {/* Route for Login without Navbar */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/sign-up" element={<Signup />} />
-      </Routes>
-    </Router>
+          {/* Route for Login without Navbar */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/sign-up" element={<Signup />} />
+        </Routes>
+      </Router>
+    </div>
   );
 };
 
