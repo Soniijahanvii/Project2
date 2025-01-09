@@ -40,7 +40,6 @@ const Midpage = () => {
           </div>
         </div>
 
-        {/* Image Section */}
         <div className="w-full lg:w-1/2">
           <img
             src={SideImage}

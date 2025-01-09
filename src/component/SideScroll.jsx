@@ -40,7 +40,7 @@ const SideScroll = () => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Default: 3 slides for desktop
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -49,7 +49,7 @@ const SideScroll = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1, // Show only 1 slide on mobile
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -65,7 +65,6 @@ const SideScroll = () => {
             className="flex justify-center items-center text-center relative p-10 ml-2"
           >
             <div className="mt-10 bg-blue-300 p-5 rounded-xl shadow-lg">
-              {/* Profile Photo */}
               <div className="w-32 h-32 bg-blue-500 rounded-full flex items-center justify-center absolute -top-0 left-1/2 transform -translate-x-1/2">
                 <img
                   src={review.profilePhoto}
@@ -74,7 +73,6 @@ const SideScroll = () => {
                 />
               </div>
 
-              {/* Card Content */}
               <div className="bg-white p-10 rounded-lg shadow-lg w-80 h-full ml-14">
                 <p className="font-bold text-xl text-gray-800 mb-4">
                   {review.name}
