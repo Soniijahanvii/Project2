@@ -9,6 +9,7 @@ import Midpage from "./component/Midpage";
 import Progress from "./component/Progress";
 import Lastpage from "./component/Lastpage";
 import Footer from "./component/Footer";
+import NotFound from "./component/Nofound";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
 
           <Route path="/login" element={<Login />} />
           <Route path="/sign-up" element={<Signup />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </div>
