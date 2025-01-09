@@ -3,6 +3,10 @@ import backgroundImage from "../assets/image4.png";
 import sideImage from "../assets/image.png";
 
 const Login = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted");
+  };
   return (
     <div
       className="h-screen bg-cover bg-center"
@@ -20,12 +24,11 @@ const Login = () => {
             />
           </div>
 
-          {/* Right Side with Login Form */}
           <div className="w-1/2 p-8 flex flex-col justify-center">
             <h2 className="text-3xl text-white font-bold mb-6 text-center">
               Hello Welcome back !!
             </h2>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="mb-4 text-center">
                 <label
                   htmlFor="email"
