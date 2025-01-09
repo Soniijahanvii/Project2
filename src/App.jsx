@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./component/Navbar";
-import Login from "./pages/login";
+import Login from "./component/login";
 import Home from "./component/Home";
 import Signup from "./component/Signup";
 import SideScroll from "./component/SideScroll";
@@ -30,7 +30,6 @@ const App = () => {
             }
           />
 
-          {/* Route for Login without Navbar */}
           <Route path="/login" element={<Login />} />
           <Route path="/sign-up" element={<Signup />} />
         </Routes>
