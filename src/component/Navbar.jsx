@@ -33,13 +33,12 @@ const Navbar = () => {
         } w-full md:w-auto md:flex flex-col md:flex-row items-center gap-8 md:gap-28 mt-4 md:mt-0 text-xl font-semibold`}
       >
         <div className="relative group">
-          <a href="/tools">
-            <li className="text-xl transition-all duration-300 p-1 md:p-0 cursor-pointer flex">
-              Tools
-              <ChevronDownIcon className="h-4 w-4 ml-2 mt-2" />
-            </li>
-          </a>
-          <ul className="absolute hidden group-hover:block md:hidden bg-white shadow-lg rounded-md mt-0 w-48 z-10">
+          <li className="text-xl transition-all duration-300 p-1 md:p-0 cursor-pointer flex items-center hover:text-blue-700 group-hover:scale-110 group-hover:font-bold hover:underline">
+            Tools
+            <ChevronDownIcon className="h-4 w-4 ml-2 mt-1" />
+          </li>
+
+          <ul className="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-0 w-48 z-10">
             <li className="px-4 py-2 hover:bg-gray-100">
               <a href="/tool1">Tool 1</a>
             </li>
@@ -51,13 +50,14 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+
         <div className="relative group">
-          <a href="/Channels">
-            <li className="text-xl transition-all duration-300 p-1 md:p-0 cursor-pointer flex">
-              Channels
-              <ChevronDownIcon className="h-4 w-4 ml-2 mt-2" />
-            </li>
-          </a>
+          {/* <a href="/Channels"> */}
+          <li className="text-xl transition-all duration-300 p-1 md:p-0 cursor-pointer flex hover:text-blue-700 group-hover:scale-110 group-hover:font-bold hover:underline">
+            Channels
+            <ChevronDownIcon className="h-4 w-4 ml-2 mt-2" />
+          </li>
+          {/* </a> */}
           <ul className="absolute hidden group-hover:block md:hidden bg-white shadow-lg rounded-md mt-0 w-48 z-10">
             <li className="px-4 py-2 hover:bg-gray-100">
               <a href="/tool1">Tool 1</a>
@@ -72,10 +72,14 @@ const Navbar = () => {
         </div>
 
         <a href="/pricing">
-          <li className="text-xl p-1">Pricing</li>
+          <li className="text-xl p-1 hover:text-blue-700 hover:underline">
+            Pricing
+          </li>
         </a>
         <a href="/blog">
-          <li className="text-xl p-1">Blog</li>
+          <li className="text-xl p-1 hover:text-blue-700 hover:underline">
+            Blog
+          </li>
         </a>
 
         <a href="/login">

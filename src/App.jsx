@@ -10,6 +10,8 @@ import Progress from "./component/Progress";
 import Lastpage from "./component/Lastpage";
 import Footer from "./component/Footer";
 import NotFound from "./component/Nofound";
+import Pricing from "./component/Pricing";
+import Blog from "./component/Blog";
 
 const App = () => {
   return (
@@ -33,6 +35,9 @@ const App = () => {
 
           <Route path="/login" element={<Login />} />
           <Route path="/sign-up" element={<Signup />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/blog" element={<Blog />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
